@@ -54,6 +54,8 @@ public class PercolationBFS extends PercolationDFSFast {
 				q.add(row*size+(col+1));
 				seen.add(row*size+(col-1));
 			}
-		}		
+		}
+		
+		return;
 	}
 }

@@ -87,7 +87,7 @@ public class PercolationUF implements IPercolate {
 	 */
 	public void open(int row, int col) {
 		if(!inBounds(row, col)) {
-			throw new IndexOutOfBoundsException(myGrid[row][col] + " is not in bounds");
+			throw new IndexOutOfBoundsException(String.format("(%d, %d) not in bounds", row, col));
 		}
 		
 		if(!myGrid[row][col]) {
