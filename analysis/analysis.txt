@@ -1,22 +1,49 @@
-Your name
-Your netid
-
-Copy/Paste results from PercolationStats using PercolationDFS
-
+Sachin Jaishankar
+sj251
 
 Copy/Paste results from PercolationStats using PercolationDFSFast
 
+	simulation data for 20 trials
+	grid	mean	stddev	time
+	100	0.593	0.014	0.867
+	200	0.591	0.010	0.714
+	400	0.590	0.006	2.909
+	800	0.594	0.004	16.642
+	Exception in thread "main" java.lang.StackOverflowError
 
 Copy/Paste results from PercolationStats using PercolationBFS
 
+	simulation data for 20 trials
+	grid	mean	stddev	time
+	100	0.593	0.014	0.382
+	200	0.591	0.010	0.372
+	400	0.590	0.006	1.871
+	800	0.594	0.004	5.680
+	1600	0.592	0.002	34.001
+	3200	0.593	0.001	265.779
 
 Copy/Paste results from PercolationStats using PercolationUF 
 with the QuickUWPC UnionFind implementation.
 
-1. How does doubling the grid size affect running time (keeping # trials fixed)
+	simulation data for 20 trials
+	grid	mean	stddev	time
+	100	0.593	0.014	0.131
+	200	0.591	0.010	0.312
+	400	0.590	0.006	0.863
+	800	0.594	0.004	7.666
+	1600	0.592	0.002	30.096
+	3200	0.593	0.001	288.598
+	
 
+1. How does doubling the grid size affect running time (keeping # trials fixed)
+	Doubling the grid size squared the running time. As evident with the results from PercolationBFS and PercolationUF,
+	when the grid size is doubled, the run time increases exponentially, making it O(n^2).
 
 2. How does doubling the number of trials affect running time.
-
+	Doubling the number of trials doubles the run time of Percolation. 
 
 3. Estimate the largest grid size you can run in 24 hours with 20 trials. Explain your reasoning.
+	When graphing the grid size vs time and fitting the data with a polynomial curve, the equation for the line of best
+	fit is y = 4E-05x^2 - 0.0513x + 10.53
+	24 hours = 86400 seconds
+	Plugging 86400 for x in the equation, the grid size would be 294,177.
