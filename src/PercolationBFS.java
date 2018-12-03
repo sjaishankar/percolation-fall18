@@ -8,7 +8,12 @@ public class PercolationBFS extends PercolationDFSFast {
 	public PercolationBFS(int n) {
 		super(n);
 	}
-	
+	/* This method uses a queue and a breadth-first search approach
+	 * to mark the given cell as full as well as any neighboring cells
+	 * to the one that was just marked as full
+	 * (non-Javadoc)
+	 * @see PercolationDFS#dfs(int, int)
+	 */
 	@Override
 	public void dfs(int row, int col) {
 		

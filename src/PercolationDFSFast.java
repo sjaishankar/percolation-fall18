@@ -5,6 +5,9 @@ public class PercolationDFSFast extends PercolationDFS{
 		super(n);
 	}
 	
+	/*Calls dfs once IF the given row, col is on the top row and not already full
+	 * or one of its neighboring cells is full
+	 */
 	@Override
 	public void updateOnOpen(int row, int col) {
 		int count = 0;

@@ -119,7 +119,7 @@ public class PercolationUF implements IPercolate {
 			}
 		}
 	}
-	
+	//checks to see if a give row and column are in bounds of the NxN simulation
 	public boolean inBounds(int row, int col) {
 		if(row < 0 || row > myGrid.length - 1) {
 			return false;
