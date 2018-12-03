@@ -27,7 +27,7 @@ public class PercolationBFS extends PercolationDFSFast {
 		int number = 0;
 		
 		while(q.size() != 0) {
-			number = q.peek();
+			number = q.remove();
 			row = number/size;
 			col = number % size;
 			
@@ -54,8 +54,6 @@ public class PercolationBFS extends PercolationDFSFast {
 				q.add(row*size+(col+1));
 				seen.add(row*size+(col-1));
 			}
-		}
-		
-		q.remove(number);
+		}		
 	}
 }
