@@ -28,8 +28,8 @@ public class PercolationUF implements IPercolate {
 	 */
 	@Override
 	public boolean isOpen(int row, int col) {
-		if(!inBounds(row, col)){
-			throw new IndexOutOfBoundsException(myGrid[row][col] + " is not in bounds");
+		if(!inBounds(row, col)) {
+			throw new IndexOutOfBoundsException(String.format("(%d, %d) not in bounds", row, col));
 		}
 		
 		return myGrid[row][col];
@@ -45,7 +45,7 @@ public class PercolationUF implements IPercolate {
 	 */
 	public boolean isFull(int row, int col) {
 		if(!inBounds(row, col)) {
-			throw new IndexOutOfBoundsException(myGrid[row][col] + " is not in bounds");
+			throw new IndexOutOfBoundsException(String.format("(%d, %d) not in bounds", row, col));
 		}
 		
 		return myFinder.connected(row*myGrid.length + col, VTOP);
